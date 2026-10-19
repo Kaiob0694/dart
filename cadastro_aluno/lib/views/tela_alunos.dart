@@ -12,6 +12,7 @@ class TelaAluno extends StatefulWidget {
 class _TelaAlunoState extends State<TelaAluno> {
   TextEditingController nomeController = TextEditingController();
   TextEditingController cursoController = TextEditingController();
+  TextEditingController idadeController = TextEditingController();
 
   AlunoController controller = AlunoController();
 
@@ -21,6 +22,7 @@ class _TelaAlunoState extends State<TelaAluno> {
     controller.cadastrar(
       nomeController.text,
       cursoController.text,
+      idadeController.text,
     );
 
     setState(() {
@@ -53,6 +55,15 @@ class _TelaAlunoState extends State<TelaAluno> {
               controller: cursoController,
               decoration: InputDecoration(
                 labelText: "Curso",
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            TextField(
+              controller: idadeController,
+              decoration: InputDecoration(
+                labelText: "Idade",
               ),
             ),
 

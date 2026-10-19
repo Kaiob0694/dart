@@ -4,8 +4,8 @@ class AlunoController {
 
   Aluno? aluno;
 
-  void cadastrar(String nome, String curso){
-    aluno = Aluno(nome, curso);
+  void cadastrar(String nome, String curso, String idade){
+    aluno = Aluno(nome, curso, idade);
   }
 
   String mostrarAluno(){
@@ -15,6 +15,7 @@ class AlunoController {
     }
 
     return "Aluno: ${aluno!.nome}\n"
-           "Curso: ${aluno!.curso}";
+           "Curso: ${aluno!.curso}\n"
+           "Idade: ${aluno!.idade}";
   }
 }
