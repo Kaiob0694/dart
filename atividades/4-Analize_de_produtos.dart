@@ -24,13 +24,13 @@ void main() {
     8
   ];
 
-  // Percorre os 5 produtos
+  
   for (int i = 0; i < nomes.length; i++) {
     print('Produto: ${nomes[i]}');
     print('Preço: R\$ ${precos[i]}');
     print('Estoque: ${estoques[i]}');
 
-    // Verifica a disponibilidade
+    
     if (estoques[i] >= 1) {
       print('Situação: Disponível');
     } else {
